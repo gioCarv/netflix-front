@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+.signup{
+    height: 140vh;
+}
+.Header{
+    border-bottom: 1px solid #e6e6e6;
+    width: 100vw;
+    height: 13vh;
+}
+
+.img--logo{
+    width: 8vw;
+    height: 5vh;
+    position: absolute;
+    top:3.5%;
+    left:3.5%;
+    background-image: url("../imgs/netflix.png");
+    background-size: 100%;
+    background-image: cover;
+    background-repeat: no-repeat;
+    
+    cursor: pointer;
+}
+
+.Header--login{
+    text-decoration: none;
+    position: relative;
+    margin-left: 92vw;
+    top: 30%;
+    color: black;
+    font-weight: 600;
+    font-size: 19px;
+    
+    
+}
+.Header--login:hover{
+    text-decoration: underline;
+
+}
+
+.Register--Container{
+    display: flex;
+    justify-content: center;
+
+
+}
+
+.Register--Box{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 0 50px;
+    width: 410px;
+    margin-top: 120px;
+    
+}
+.Register--Box h1{
+    color: black;
+}
+
+.Register--Email, .Register--Password, .Register--ConfirmPassword, .Register--Button{
+    margin-top: 20px;
+    padding: 19px 10px;
+
+}   
+
+#email, #password, #emailRep {
+    color: #e50914;
+    font-size: 13px;
+}
+
+.Register--Button{
+    margin-top: 30px;
+    margin-bottom: 130px;
+    background-color: #e50914;
+    font-size: 22px;
+    border: none;
+    color: aliceblue;  
+    border-radius: 5px;
+    
+}
+
+.Register--Button:hover{
+    background-color: #f30b17;
+    cursor: pointer;
+}
+
+
+
+.footer{
+    position: absolute;
+    width: 100vw;
+    height: 200px;
+    background-color: #f3f3f3;
+    bottom: -40vh;
+    padding: 40px 0;
+    
+}
+
+.footer span, .footer a{
+    
+    color: #737373;
+    font-size: 12;
+
+}
+.footer a:hover{
+    text-decoration:underline;
+    cursor:pointer;
+}
+
+.footer--links{
+    margin-top: 30px;
+    font-size: 12.5px;
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+}
+.footer--links a{
+    margin-bottom: 15px;
+}
+
+.footer--container{
+    font-size: 10;
+    position: relative;
+    width: 60vw;
+    padding-left: 10vw;
+}
+@media (max-width:1300px) {
+    .footer{
+        position: static;
+        width: 100vw;
+        height: 200px;
+        background-color: #f3f3f3;
+        bottom: -40vh;
+        padding: 40px 0;
+        
+    }
+}
+@media (max-width:950px) {
+    .Header{
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: row;
+        margin-top: 30px;
+        justify-content: space-between;
+        width: 100vw;
+        height: 70px;
+        border-bottom: 1.5px solid #e6e6e6;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .img--logo{
+        top:0;
+        left:0;
+        height: 70px;
+        width: 80px;
+        position:static;
+        text-align: center; 
+        margin-top: 10px;
+        padding: 0;
+    }
+
+    .Header--login{
+        position:static;
+        margin-left: 0;
+        margin-top: 10px;
+        color: black;
+        font-weight: 600;
+        font-size: 19px;
+        padding: 0;
+        
+    }
+
+
+.signup{
+        height: auto;
+    }
+    
+
+
+.footer{
+    position: static;
+    width: 100vw;
+    height: 200px;
+    background-color: #f3f3f3;
+    bottom: -40vh;
+    padding: 40px 0;
+    
+}
+
+
+.footer--links{
+    margin-top: 30px;
+    font-size: 12.5px;
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+}
+
+}
