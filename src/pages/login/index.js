@@ -5,6 +5,7 @@ import { useState } from "react";
 import Axios from "axios";
 
 const Login = () => {
+    const URL = "https://nodejs-netflix.herokuapp.com"
     const [values, setValues] = useState()
     const handleChangeValues = event => {
         setValues((prevValue) => ({
@@ -17,13 +18,13 @@ const Login = () => {
     const handleClickButton = async () => {
 
 
-        const emailExist = await Axios.post("http://localhost:3002/userEmail", {
+        const emailExist = await Axios.post(`${URL}/userEmail`, {
             email: values.email,
         }).then(result => { return result.data })
 
         if (emailExist) {
             document.getElementById('text').textContent = ''
-            const userExist = await Axios.post("http://localhost:3002/user", {
+            const userExist = await Axios.post(`${URL}/user`, {
                 email: values.email,
                 password: values.password,
             }).then(result => { return result.data })
@@ -33,7 +34,7 @@ const Login = () => {
                 document.querySelector(".login--password").style.borderBottom = '0px solid #e87c03'
                 document.querySelector(".login--email").style.borderBottom = '0px solid #e87c03'
 
-                const tokenAndUser = await Axios.post("http://localhost:3002/signin", {
+                const tokenAndUser = await Axios.post(`${URL}/signin`, {
                     email: values.email,
                     password: values.password,
                 }).then(result => {
