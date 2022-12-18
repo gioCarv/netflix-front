@@ -2,10 +2,9 @@ import React, { useEffect, useState } from "react";
 import signup from "./signup.css"
 import { Link } from "react-router-dom";
 import Axios from 'axios'
-import axios from "axios";
 
 const Signup = () => {
-
+    const URL = "https://nodejs-netflix.herokuapp.com"
     const [values, setValues] = useState()
     const handleChangeValues = event => {
         setValues((prevValue) => (
@@ -23,7 +22,7 @@ const Signup = () => {
             if (passwordEqual && validEmail) {
 
                 await existOrNot(values.email)
-                await Axios.post("http://localhost:3002/signup", {
+                await Axios.post(`${URL}/signup`, {
                     email: values.email,
                     password: values.password
 
@@ -60,7 +59,7 @@ const Signup = () => {
     }
 
     const existOrNot = async (email) => {
-        Axios.get(`http://localhost:3002/get/${email}`, {
+        Axios.get(`${URL}/get/${email}`, {
         }).then((response) => {
             console.log(response.data[0])
 
