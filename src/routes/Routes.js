@@ -7,6 +7,7 @@ import Axios from 'axios';
 
 
 const RoutesApp = () => {
+    const URL = "https://nodejs-netflix.herokuapp.com"
 
     const [authenticated, setAuthenticated] = useState()
 
@@ -23,7 +24,7 @@ const RoutesApp = () => {
             token = null
         }
             
-            Axios.post("http://localhost:3002/home", {
+            Axios.post(`${URL}/home`, {
                 token: token,
             }).then(result => { 
                     isAuthenticated(result.data)                     
