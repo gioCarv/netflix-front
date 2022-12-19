@@ -39,7 +39,7 @@ const Login = () => {
                     password: values.password,
                 }).then(result => {
                     localStorage.setItem('token', JSON.stringify(result.data))
-                    window.location.href = 'http://localhost:3000/home'
+                    window.location.href = `${URL}/home`
 
                 })
 
