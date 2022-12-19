@@ -39,14 +39,7 @@ const RoutesApp = () => {
             <Routes>
                 <Route exact path='/' element={<Login />} />
                 <Route exact path='/signup' element={<Signup />} />
-                <Route
-                    path="/home"
-                    element={
-                        <PrivateRoute>
-                            <Home/>
-                        </PrivateRoute>
-                    }
-                />
+                <Route exact path="/home" element = {<Home/>} />
                 <Route exact path="*" element={<Login />} />
             </Routes>
         </BrowserRouter>
