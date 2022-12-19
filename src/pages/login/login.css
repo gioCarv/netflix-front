@@ -238,6 +238,24 @@ margin-bottom: 2px;
     cursor: pointer;
 }
 
+@media (max-width:1600px) {
+    .container2{
+        margin-top: 100px;
+    }
+}
+@media (max-width:1300px) {
+    .footer1{
+    height: 17vh;
+    bottom: -85vh;
+}
+    .background, .img--background{
+        height: 185vh;
+    }
+    .container2{
+        height: 550px;
+    }
+}
+
 @media (max-width:950px) {
 
 
