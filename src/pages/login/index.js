@@ -6,6 +6,7 @@ import Axios from "axios";
 
 const Login = () => {
     const URL = "https://nodejs-netflix.herokuapp.com"
+    const URL_SITE = "https://netflix-front-react.herokuapp.com/"
     const [values, setValues] = useState()
     const handleChangeValues = event => {
         setValues((prevValue) => ({
@@ -39,7 +40,7 @@ const Login = () => {
                     password: values.password,
                 }).then(result => {
                     localStorage.setItem('token', JSON.stringify(result.data))
-                    window.location.href = `${URL}/home`
+                    window.location.href = `${URL_SITE}/home`
 
                 })
 
