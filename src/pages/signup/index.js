@@ -5,6 +5,7 @@ import Axios from 'axios'
 
 const Signup = () => {
     const URL = "https://nodejs-netflix.herokuapp.com"
+    const URL_SITE = "https://netflix-front-react.herokuapp.com/"
     const [values, setValues] = useState()
     const handleChangeValues = event => {
         setValues((prevValue) => (
@@ -64,7 +65,7 @@ const Signup = () => {
             console.log(response.data[0])
 
             if (typeof response.data[0] === "undefined") {
-                setTimeout(() => window.location.href = URL, 2000)
+                setTimeout(() => window.location.href = URL_SITE, 2000)
                 alert("usuário cadastrado com sucesso")
                 return true
             }
