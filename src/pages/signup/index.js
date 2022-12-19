@@ -64,7 +64,7 @@ const Signup = () => {
             console.log(response.data[0])
 
             if (typeof response.data[0] === "undefined") {
-                setTimeout(() => window.location.href = "http://localhost:3000", 2000)
+                setTimeout(() => window.location.href = URL, 2000)
                 alert("usuário cadastrado com sucesso")
                 return true
             }
