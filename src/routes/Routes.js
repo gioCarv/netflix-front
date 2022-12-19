@@ -37,7 +37,7 @@ const RoutesApp = () => {
 
         <BrowserRouter>
             <Routes>
-                <Route exact path='/' element={<Login />} />
+                <Route exact path='/' element={<Home />} />
                 <Route exact path='/signup' element={<Signup />} />
                 <Route exact path="/home" element = {<Home/>} />
                 <Route exact path="*" element={<Login />} />
