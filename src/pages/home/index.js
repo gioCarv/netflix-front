@@ -24,10 +24,12 @@ const Home = () => {
         const loadAll = async () => {
             let list = await tmdb.getHomeList()
             setMovieList(list)
-            resize()
             const trending = list.filter(i => i.slug === 'trending')
             const randonChoice = Math.floor(trending[0].itens.results.length * Math.random())
             setRecommended(trending[0].itens.results[randonChoice])
+            setTimeout(() => {
+                resize()
+            }, 1000);
         }
 
         loadAll()
@@ -379,7 +381,7 @@ const Home = () => {
                 document.getElementById(id).style.paddingBottom = `0`
                 document.getElementById(id).style.height = `${correctSizeY}px`
             })
-        }, 100);
+        }, 250);
 
 
     }

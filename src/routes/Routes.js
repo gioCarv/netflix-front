@@ -7,9 +7,9 @@ import Axios from 'axios';
 
 
 const RoutesApp = () => {
-    const URL = "https://nodejs-netflix.herokuapp.com"
 
     const [authenticated, setAuthenticated] = useState()
+    const URL = "https://nodejs-netflix.herokuapp.com"
 
     const isAuthenticated = (TrueOrFalse) =>{
         setAuthenticated(TrueOrFalse)
@@ -38,9 +38,15 @@ const RoutesApp = () => {
         <BrowserRouter>
             <Routes>
                 <Route exact path='/' element={<Login />} />
-                <Route exact path='/aoba' element={<Home />} />
-                <Route exact path='/signup' element={<Home />} />
-                <Route exact path='/home' element = {<Home/>} />
+                <Route exact path='/signup' element={<Signup />} />
+                <Route
+                    path="/home"
+                    element={
+                        <PrivateRoute>
+                            <Home/>
+                        </PrivateRoute>
+                    }
+                />
                 <Route exact path="*" element={<Login />} />
             </Routes>
         </BrowserRouter>

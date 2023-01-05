@@ -5,7 +5,7 @@ import Axios from 'axios'
 
 const Signup = () => {
     const URL = "https://nodejs-netflix.herokuapp.com"
-    const URL_SITE = "https://netflix-front-react.herokuapp.com/"
+    const URL_SITE = "https://netflix-app-react.herokuapp.com/"
     const [values, setValues] = useState()
     const handleChangeValues = event => {
         setValues((prevValue) => (
