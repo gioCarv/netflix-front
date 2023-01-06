@@ -5,8 +5,8 @@ import { useState } from "react";
 import Axios from "axios";
 
 const Login = () => {
-    const URL = "https://nodejs-netflix.herokuapp.com"
-    const URL_SITE = "https://netflix-app-react.herokuapp.com/"
+    const URL = "https://nodejs-netflix.onrender.com"
+    const URL_SITE = "https://projetonetflix.onrender.com"
     const [values, setValues] = useState()
     const handleChangeValues = event => {
         setValues((prevValue) => ({
