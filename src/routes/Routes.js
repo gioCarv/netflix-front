@@ -9,7 +9,7 @@ import Axios from 'axios';
 const RoutesApp = () => {
 
     const [authenticated, setAuthenticated] = useState()
-    const URL = "https://nodejs-netflix.herokuapp.com"
+    const URL = "https://nodejs-netflix.onrender.com"
 
     const isAuthenticated = (TrueOrFalse) =>{
         setAuthenticated(TrueOrFalse)
