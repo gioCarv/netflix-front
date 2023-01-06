@@ -5,7 +5,7 @@ import Axios from 'axios'
 
 const Signup = () => {
     const URL = "https://nodejs-netflix.onrender.com"
-    const URL_SITE = "https://projetonetflix.onrender.com"
+    const URL_SITE = "https://projectnetflix.netlify.app"
     const [values, setValues] = useState()
     const handleChangeValues = event => {
         setValues((prevValue) => (
