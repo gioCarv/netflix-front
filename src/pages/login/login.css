@@ -258,13 +258,13 @@ margin-bottom: 2px;
     }
 }
 @media (max-width:1300px) {
+    :root{
+    --size-Ybackground: 185vh;
+}
     .footer1{
     height: 17vh;
     bottom: -85vh;
 }
-    .background, .img--background{
-        height: 185vh;
-    }
     .container2{
         height: 550px;
     }
