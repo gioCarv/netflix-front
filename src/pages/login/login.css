@@ -5,7 +5,7 @@
     --size-Ybackground: 150vh;
 }
 #loading{
-    display:none
+    display:none;
     position: absolute;
     z-index: 6;
     width: var(--size-Xbackground);
