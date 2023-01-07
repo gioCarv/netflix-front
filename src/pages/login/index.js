@@ -34,6 +34,8 @@ const Login = () => {
             if (userExist) {
                 document.querySelector(".login--password").style.borderBottom = '0px solid #e87c03'
                 document.querySelector(".login--email").style.borderBottom = '0px solid #e87c03'
+                document.getElementById("loading").style.display = 'initial'
+                document.getElementById('login').style.display = 'none'
 
                 const tokenAndUser = await Axios.post(`${URL}/signin`, {
                     email: values.email,
@@ -43,11 +45,6 @@ const Login = () => {
                     window.location.href = `${URL_SITE}/home`
 
                 })
-
-
-
-
-
 
             } else {
                 document.getElementById('textHeaderPassword').style.display = 'inline'
@@ -72,6 +69,10 @@ const Login = () => {
     return (
 
         <>
+            <div id="loading">
+                  <div id="loading"/>
+            </div>
+            <section id="login" >
             <img className="img--background" src="https://assets.nflxext.com/ffe/siteui/vlv3/5aecc44d-2a1f-4313-8399-98df20908b64/2fd8349f-d951-4b47-af30-89378a71cd16/BR-pt-20221114-popsignuptwoweeks-perspective_alpha_website_large.jpg" />
             <div className="background">
 
@@ -127,6 +128,8 @@ const Login = () => {
 
                     </div>
                 </div>
+           </section>
+
         </>
 
 
