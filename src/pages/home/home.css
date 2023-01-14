@@ -439,10 +439,9 @@ display: flex;
 
 
 .Home--list--movie {
-    height: 21vh;
+    height: min-content;
     transform: scale(0.96);
-    
-    
+    margin-bottom: 21vh;
 }
 .Home--list--movies {
 }
